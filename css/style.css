@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.non-visible{
+	display: none;
+	transition: all, 300ms;
+}
+
+.visible{
+	display: block;
+	transition: all, 300ms;
+}
+
+.max-40-vw{
+	max-width: 40vw;
+}
+
+
+	
