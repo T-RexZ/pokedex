@@ -9,61 +9,56 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-	<body class="container max-40-vw">
+	<body class="container">
 	<div class="row">
-		<button class="btn" onclick="show_login()">
+		<button class="btn btn-default" onclick="show_login()">
 			I already have a login
 		</button>
 			
 		
 
-		<form id="login-form" action="login.php" class="non-visible row" method="post">
+		<form id="login-form"  action="login.php" class="non-visible row form-group" method="post">
 
-			<input type="text" placeholder="email" name="login_email"></input>
-			
-			<br>
+			<label for="login_email">Email Address</label>
 
-			<input type="password" placeholder="password" name="login_pw"></input>
-			
-			<br>
-			
-			<input class="btn" type="submit" name="login_submit"></input>
+			<input class="form-control" type="text" placeholder="email" name="login_email"></input><br>
 
-			<br>
+			<label for="login_pw">Password</label>
 
+			<input class="form-control" type="password" placeholder="password" name="login_pw"></input><br>
+
+			<input class="btn btn-default" type="submit" name="login_submit"></input><br>
 
 		</form>
 
-
-		<button class="btn" onclick="show_register()">
+ 
+		<button class="btn btn-default" onclick="show_register()">
 			I dont have a login
 		</button>
 
-		<form id="register-form" action="reg.php" class="non-visible row" method="post">
+		<form id="register-form" action="reg.php" class="non-visible row form-group" method="post">
 			
-			<input type="text" placeholder="email" name="reg_email"></input>
+		    <label for="reg_email">Email address</label>
+
+			<input class="form-control" type="text" placeholder="email" name="reg_email"></input><br>
+
+			<label for="reg_pw">Password</label>
+
+			<input class="form-control" type="password" placeholder="password" name="reg_pw"></input><br>
+
+			<label for="reg_rep_pw">Repeat password</label>
 			
-			<br>
+			<input class="form-control" type="password" placeholder="repeat password" name="reg_rep_pw"></input><br>
 
-			<input type="password" placeholder="password" name="reg_pw"></input>
-			
-			<br>
-			
-			<input type="password" placeholder="repeat password" name="reg_rep_pw"></input>
+			<label for="reg_phone">Phone</label>
 
-			<br>
+			<input class="form-control" type="text" placeholder="phone number" name="reg_phone"></input><br>
 
-			<input type="text" placeholder="phone number" name="reg_phone"></input>
+			<label for="reg_name">Name</label>
 
-			<br>
+			<input class="form-control" type="text" placeholder="name" name="reg_name"></input><br>
 
-			<input type="text" placeholder="name" name="reg_name"></input>
-
-			<br>
-
-			<input class="btn" type="submit" name="reg_submit"></input>
-
-			<br>
+			<input class="btn btn-default" type="submit" name="reg_submit"></input><br>
 
 
 

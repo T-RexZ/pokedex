@@ -4,7 +4,7 @@
 }
 body{
 	text-align: center;
-	margin: 12px;
+	
 }
 .non-visible{
 	display: none;
@@ -31,12 +31,14 @@ button{
 form{
 	margin: 12px;
 	display: block;
+	text-align: left;
 }
 input{
 	margin: 6px;
 }
 
 a{
+	margin: 18px;
 	display: block;
 	color: #fff;
 
@@ -58,5 +60,10 @@ footer{
   height:0px;
   margin: 0px;
 
+}
+
+label{
+	color: #fff;
+	margin: 12px;
 }
 	
