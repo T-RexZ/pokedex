@@ -3,7 +3,7 @@
 	session_start();
 
 	if (isset($_POST["rig_submit"])) {
-		include_once("../connection.php");
+		include_once("connection.php");
 		$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["rig_email"])));
 		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["rig_pw"])));
 		$name = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["rig_name"])));
