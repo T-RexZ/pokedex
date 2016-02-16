@@ -57,10 +57,6 @@
 
 			<br>
 
-			
-
-			<br>
-
 			<input class="btn" type="submit" name="reg_submit"></input>
 
 			<br>
