@@ -22,7 +22,7 @@
 				if (move_uploaded_file($billed["tmp_name"], "img/profile_pic/" . $img)) {
 				}else {
 					mysqli_close($dbc);
-					die(header("location: index.php"));
+					die(header("location: index.php?img=0"));
 				}
 			}
 		}else {
@@ -36,12 +36,12 @@
 
 		if ($query = mysqli_query($dbc, $sql)) {
 			mysqli_close($dbc);
-			die(header("location: index.php"));
+			die(header("location: index.php?reg=1"));
 		}else {
 			mysqli_close($dbc);
 			die(header("location: index.php?reg=0"));
 		}
 	}else {
-		die(header("location: index.php?in=0"));
+		die(header("location: index.php?ind=0"));
 	}
 ?>

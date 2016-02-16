@@ -22,9 +22,9 @@
 			die(header("location: user.php"));
 		}else{
 			mysqli_close($dbc);
-			die(header("location: index.php"));
+			die(header("location: index.php?log=0"));
 		}
 	}else {
-		die(header("location: index.php"));
+		die(header("location: index.php?sub=0"));
 	}
 ?>
