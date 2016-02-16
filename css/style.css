@@ -30,8 +30,12 @@ button{
 }
 form{
 	margin: 12px;
+	display: block;
 }
 input{
 	margin: 6px;
+}
+a{
+	display: block;
 }
 	

@@ -49,14 +49,24 @@
 			
 			<br>
 			
+			<input type"password" placeholder="repeat password"></input>
+
+			<br>
+
+			<input></input>
+
+			<br>
+
 			<input class="btn" type="submit" name="register_submit"></input>
 
 			<br>
 
 
+
+
 		</form>
 
-		<br>
+		
 
 		<a href="about.php">What is PokeDex?</a>
 
