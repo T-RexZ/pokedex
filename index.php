@@ -14,8 +14,6 @@
 		<button class="btn" onclick="show_login()">
 			I already have a login
 		</button>
-			
-		
 
 		<form id="login-form" action="login.php" class="non-visible row" method="post">
 
@@ -31,9 +29,7 @@
 
 			<br>
 
-
 		</form>
-
 
 		<button class="btn" onclick="show_register()">
 			I dont have a login
@@ -65,12 +61,7 @@
 
 			<br>
 
-
-
-
 		</form>
-
-		
 
 		<a href="about.php">What is PokeDex?</a>
 

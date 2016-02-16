@@ -1,15 +1,14 @@
 <?php
 	error_reporting(E_ALL & ~E_NOTICE);
-	session_start();
 
 	if (isset($_POST["reg_submit"])) {
 		include_once("../connection.php");
 		$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_email"])));
 		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_pw"])));
-		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_rep_pw"])));
+		$rep_password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_rep_pw"])));
 		$name = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_name"])));
 
-		if(!empty($phone)) {
+		if(!empty($_POST["reg_phone"])) {
 			$phone = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_phone"])));
 		}else {
 			$phone = "NULL";
