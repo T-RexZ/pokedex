@@ -2,7 +2,10 @@
 	margin: 0;
 	padding: 0;
 }
-
+body{
+	text-align: center;
+	margin: 12px;
+}
 .non-visible{
 	display: none;
 	transition: all, 300ms;
@@ -14,8 +17,21 @@
 }
 
 .max-40-vw{
-	max-width: 40vw;
+	width: 40vw;
 }
-
-
+.max-40-of-parent{
+	width: 40%; 
+}
+button{
+	min-width: 200px;
+	display: block;
+	margin: 12px;
+	font-size: 1,5rem;
+}
+form{
+	margin: 12px;
+}
+input{
+	margin: 6px;
+}
 	
