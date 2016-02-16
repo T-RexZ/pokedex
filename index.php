@@ -39,25 +39,25 @@
 			I dont have a login
 		</button>
 
-		<form id="register-form" action="rig.php" class="non-visible row">
+		<form id="register-form" action="reg.php" class="non-visible row">
 			
-			<input type="text" placeholder="email" name="register_email"></input>
+			<input type="text" placeholder="email" name="reg_email"></input>
 			
 			<br>
 
-			<input type="password" placeholder="password" name="register_pw"></input>
+			<input type="password" placeholder="password" name="reg_pw"></input>
 			
 			<br>
 			
-			<input type"password" placeholder="repeat password"></input>
-
-			<br>
-
-			<input></input>
+			<input type"password" placeholder="repeat password" name="reg_rep_pw"></input>
 
 			<br>
 
-			<input class="btn" type="submit" name="register_submit"></input>
+			<input type="text" placeholder="phone number" name="reg_phone"></input>
+
+			<br>
+
+			<input class="btn" type="submit" name="reg_submit"></input>
 
 			<br>
 
