@@ -3,7 +3,7 @@
 	session_start();
 
 	if (isset($_POST["reg_submit"])) {
-		include_once("../connection.php");
+		include_once("connection.php");
 		$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_email"])));
 		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_pw"])));
 		$name = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_name"])));
@@ -20,9 +20,9 @@
 			die(header("location: index.php"));
 		}else{
 			mysqli_close($dbc);
-			die(header("location: index.php"));
+			die(header("location: index.php?reg=0"));
 		}
 	}else {
-		die(header("location: index.php"));
+		die(header("location: index.php?in=0"));
 	}
 ?>
