@@ -21,7 +21,7 @@
 			
 		
 
-		<form id="login-form" class="col-sm-12 non-visible max-40-vw row" method="post">
+		<form id="login-form" action="login.php" class="col-sm-12 non-visible max-40-vw row" method="post">
 
 			<input class="col-sm-12" type="text" placeholder="email" name="login_email"></input>
 			
@@ -37,7 +37,7 @@
 			I dont have a login
 		</button>
 
-		<form id="register-form" class="col-sm-12 non-visible container">
+		<form id="register-form" action="rig.php" class="col-sm-12 non-visible container">
 			
 
 		</form>
