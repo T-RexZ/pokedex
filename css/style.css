@@ -35,7 +35,27 @@ form{
 input{
 	margin: 6px;
 }
+
 a{
 	display: block;
+
+}
+
+header{
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+}
+
+
+
+body{
+	background: #2D78BB;
+}
+
+footer{
+  height:0px;
+  margin: 0px;
+
 }
 	
