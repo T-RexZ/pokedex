@@ -39,9 +39,9 @@
 			die(header("location: index.php"));
 		}else {
 			mysqli_close($dbc);
-			die(header("location: index.php"));
+			die(header("location: index.php?reg=0"));
 		}
 	}else {
-		die(header("location: index.php"));
+		die(header("location: index.php?in=0"));
 	}
 ?>

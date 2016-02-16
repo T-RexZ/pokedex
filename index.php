@@ -39,7 +39,7 @@
 			I dont have a login
 		</button>
 
-		<form id="register-form" action="reg.php" class="non-visible row">
+		<form id="register-form" action="reg.php" class="non-visible row" method="post">
 			
 			<input type="text" placeholder="email" name="reg_email"></input>
 			
@@ -50,6 +50,10 @@
 			<br>
 			
 			<input type"password" placeholder="repeat password" name="reg_rep_pw"></input>
+
+			<br>
+
+			<input type="text" placeholder="name" name="reg_name"></input>
 
 			<br>
 
