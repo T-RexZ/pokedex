@@ -3,7 +3,7 @@
 	session_start();
 
 	if (isset($_POST["reg_submit"])) {
-		include_once("connection.php");
+		include_once("../connection.php");
 
 		if (!empty($_POST["reg_email"])) {
 			$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_email"])));
@@ -50,7 +50,7 @@
 		}
 
 		if ($_FILES["reg_img"]["size"] != 0) {
-			$billed = $_FILES["file_upload"];
+			$billed = $_FILES["reg_img"];
 			$img = mysqli_real_escape_string($dbc, trim(strip_tags($_FILES["reg_img"]["name"])));
 			if ($billed["error"] == UPLOAD_ERR_OK && !empty($billed)) {
 				if (!move_uploaded_file($billed["tmp_name"], "img/profile_pic/" . $img)) {
