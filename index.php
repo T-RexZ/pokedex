@@ -35,7 +35,7 @@
 
 			<label for="login_email">Email Address</label>
 
-			<input class="form-control" type="text" placeholder="email" name="login_email"></input><br>
+			<input class="form-control" type="email" placeholder="email" name="login_email"></input><br>
 
 			<label for="login_pw">Password</label>
 
@@ -59,7 +59,7 @@
 			    	}
 			    }  
 		    ?>
-			<input class="form-control" type="text" placeholder="email" name="reg_email"></input><br>
+			<input class="form-control" type="email" placeholder="email" name="reg_email"></input><br>
 
 			<label for="reg_pw">Password</label>
 			<?php
