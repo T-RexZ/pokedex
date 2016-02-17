@@ -62,7 +62,7 @@
  
 		
 
-		<form id="register-form" action="reg.php" class="non-visible form-group" method="post">
+		<form id="register-form" action="reg.php" class="non-visible form-group" method="post" enctype="multipart/form-data">
 
 			
 		    <label for="reg_email">Email address</label>
@@ -110,7 +110,13 @@
 			<input class="form-control" type="text" placeholder="name" name="reg_name"></input><br>
 
 			<label for="reg_img">Profile picture</label>
-
+			<?php
+			    if (isset($errors)) {
+			    	if (!empty($errors)) {
+			    		echo "<p>" . $errors["file"] . "</p>";
+			    	}
+			    }  
+		    ?>
 			<input class="btn btn-default" type="file" name="reg_img"></input>
 
 			<input class="btn btn-default" type="submit" name="reg_submit"></input><br>

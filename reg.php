@@ -49,13 +49,9 @@
 			$phone = "NULL";
 		}
 
-		if ($_FILES["reg_img"]["size"] != 0) {
-			$billed = $_FILES["file_upload"];
+		if ($_FILES["reg_img"]['size'] != 0) {
+			$billed = $_FILES["reg_img"];
 			$img = mysqli_real_escape_string($dbc, trim(strip_tags($_FILES["reg_img"]["name"])));
-			$filename = "./img/prifile_pic/";
-			if (!file_exists($filename)) {
-			    mkdir($filename, 0777);
-			}
 			if ($billed["error"] == UPLOAD_ERR_OK && !empty($billed)) {
 				if (!move_uploaded_file($billed["tmp_name"], "img/profile_pic/" . $img)) {
 					$errors["file"] = "The file cant be uploadet";
