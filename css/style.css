@@ -2,48 +2,48 @@
 	margin: 0;
 	padding: 0;
 }
-
 body{
 	text-align: center;
-	margin: 12px;
+	
 }
-
 .non-visible{
-	display: none;
-	transition: 300ms;
+	height: 0;
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s, opacity 0.3s linear;
 }
 
 .visible{
-	display: block;
-	transition: 300ms;
+	height: auto;
+	visibility: visible;
+  	opacity: 1;
 }
 
 .max-40-vw{
 	width: 40vw;
 }
-
 .max-40-of-parent{
 	width: 40%; 
 }
-
 button{
 	min-width: 200px;
 	display: block;
 	margin: 12px;
 	font-size: 1,5rem;
 }
-
 form{
 	margin: 12px;
 	display: block;
+	
 }
-
 input{
 	margin: 6px;
 }
 
 a{
+	margin: 18px;
 	display: block;
+	color: #fff;
 
 }
 
@@ -52,6 +52,8 @@ header{
   width: 0px;
   margin: 0px;
 }
+
+
 
 body{
 	background: #2D78BB;
@@ -62,4 +64,12 @@ footer{
   margin: 0px;
 
 }
+
+label{
+	color: #fff;
+	margin: 12px;
+}
 	
+::-webkit-scrollbar{
+	display: none;
+}
