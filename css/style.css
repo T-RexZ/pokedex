@@ -4,7 +4,11 @@
 }
 body{
 	text-align: center;
+<<<<<<< HEAD
 	margin: 12px;
+=======
+	
+>>>>>>> master
 }
 .non-visible{
 	display: none;
@@ -31,14 +35,35 @@ button{
 form{
 	margin: 12px;
 	display: block;
+<<<<<<< HEAD
+}
+input{
+	margin: 6px;
+=======
+	text-align: left;
 }
 input{
 	margin: 6px;
 }
 
 a{
+	margin: 18px;
+	display: block;
+	color: #fff;
+
+}
+
+header{
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+>>>>>>> master
+}
+
+a{
 	display: block;
 
+<<<<<<< HEAD
 }
 
 header{
@@ -48,6 +73,8 @@ header{
 }
 
 
+=======
+>>>>>>> master
 
 body{
 	background: #2D78BB;
@@ -58,4 +85,12 @@ footer{
   margin: 0px;
 
 }
+<<<<<<< HEAD
+=======
+
+label{
+	color: #fff;
+	margin: 12px;
+}
+>>>>>>> master
 	
