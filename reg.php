@@ -50,7 +50,7 @@
 			$errors["name"] = "The name cannot be empty";
 		}
 		//tjekker om reg_phone
-		if(!empty($_POST["reg_phone"])) {
+		if (!empty($_POST["reg_phone"])) {
 			//fjerner tags som kan bruges til injections
 			$phone = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_phone"])));
 			//tjekker om phone er fomateret rigtigt
