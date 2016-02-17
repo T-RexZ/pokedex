@@ -31,7 +31,7 @@
 			I already have a login
 		</button>
 
-		<form id="login-form"  action="login.php" class="non-visible row form-group" method="post">
+		<form id="login-form"  action="login.php" class="non-visible form-group" method="post">
 
 			<label for="login_email">Email Address</label>
 
@@ -49,7 +49,7 @@
 			I dont have a login
 		</button>
 
-		<form id="register-form" action="reg.php" class="non-visible row form-group" method="post">
+		<form id="register-form" action="reg.php" class="non-visible form-group" method="post">
 			
 		    <label for="reg_email">Email address</label>
 		    <?php

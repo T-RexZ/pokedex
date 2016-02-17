@@ -2,10 +2,12 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	text-align: center;
 	
 }
+
 .non-visible{
 	height: 0;
 	visibility: hidden;
@@ -22,22 +24,26 @@ body{
 .max-40-vw{
 	width: 40vw;
 }
+
 .max-40-of-parent{
 	width: 40%; 
 }
+
 button{
 	min-width: 200px;
 	display: block;
 	margin: 12px;
 	font-size: 1,5rem;
 }
+
 form{
 	margin: 12px;
 	display: block;
 	
 }
+
 input{
-	margin: 6px;
+	margin: 6px 0;
 }
 
 a{
