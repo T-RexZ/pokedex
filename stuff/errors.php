@@ -28,16 +28,17 @@
 
 
 <?php
-	
-	if (empty($_SESSION['errors[]']) === false){
-		?>
-		<ul style="text-align: center; list-style-type: none;">
+	if(isset($_SESSION['errors[]']))
+		if (empty($_SESSION['errors[]']) === false){
+			?>
+			<ul style="text-align: center; list-style-type: none;">
+			<?php
+				foreach ($_SESSION['errors[]'] as $error) {
+					echo "<li>{$error}</li>";
+				}
+			?>
+			</ul>
 		<?php
-			foreach ($_SESSION['errors[]'] as $error) {
-				echo "<li>{$error}</li>";
-			}
-		?>
-		</ul>
-	<?php
+		}
 	}
 ?>

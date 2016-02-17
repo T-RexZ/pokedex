@@ -3,7 +3,7 @@
 	session_start();
 
 	if (isset($_POST["login_submit"])) {
-		include_once("connection.php");
+		include_once("../connection.php");
 		$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["login_email"])));
 		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["login_pw"])));
 
@@ -22,9 +22,9 @@
 			die(header("location: user.php"));
 		}else{
 			mysqli_close($dbc);
-			die(header("location: index.php"));
+			die(header("location: index.php?log=0"));
 		}
 	}else {
-		die(header("location: index.php"));
+		die(header("location: index.php?sub=0"));
 	}
 ?>
