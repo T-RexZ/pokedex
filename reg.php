@@ -49,7 +49,7 @@
 			$phone = "NULL";
 		}
 
-		if ($_FILES["reg_img"]['size'] != 0) {
+		if ($_FILES["reg_img"]["size"] != 0) {
 			$billed = $_FILES["reg_img"];
 			$img = mysqli_real_escape_string($dbc, trim(strip_tags($_FILES["reg_img"]["name"])));
 			if ($billed["error"] == UPLOAD_ERR_OK && !empty($billed)) {
