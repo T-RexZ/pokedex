@@ -39,7 +39,7 @@
 			I dont have a login
 		</button>
 
-		<form id="register-form" action="reg.php" class="non-visible row form-group" method="post">
+		<form id="register-form" action="reg.php" class="non-visible row form-group" method="post" encryption="multipart/from-data">
 			
 		    <label for="reg_email">Email address</label>
 
@@ -60,6 +60,10 @@
 			<label for="reg_name">Name</label>
 
 			<input class="form-control" type="text" placeholder="name" name="reg_name"></input><br>
+
+			<label for="reg_img">Profile picture</label>
+
+			<input class="btn btn-default" type="file" name="reg_img"></input>
 
 			<input class="btn btn-default" type="submit" name="reg_submit"></input><br>
 

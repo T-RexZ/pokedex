@@ -7,13 +7,16 @@ body{
 	
 }
 .non-visible{
-	display: none;
-	transition: 300ms;
+	height: 0;
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s, opacity 0.3s linear;
 }
 
 .visible{
-	display: block;
-	transition: 300ms;
+	height: auto;
+	visibility: visible;
+  	opacity: 1;
 }
 
 .max-40-vw{
@@ -31,7 +34,7 @@ button{
 form{
 	margin: 12px;
 	display: block;
-	text-align: left;
+	
 }
 input{
 	margin: 6px;
@@ -67,3 +70,7 @@ label{
 	margin: 12px;
 }
 	
+::-webkit-scrollbar{
+	display: none;
+}
+
