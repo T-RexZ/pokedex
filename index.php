@@ -24,11 +24,27 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+	<header>
+		<div class="jumbotron">
+  			<div class="container">
+    			<h1>Welcome to PokeDex!</h1>
+    			<p>PokeDex is a simple tool for colleagues to register when they arrive at work, or if they are sick, late or otherwise hindered.</p>
+  			</div>
+		</div>
+	</header>
 	<body class="container">
 	<div class="row">
 
-		<button class="btn btn-default" onclick="show_login()">
+		<button class="btn btn-default nav-pills" onclick="show_login()">
 			I already have a login
+		</button>
+
+		<button class="btn btn-default nav-pills" onclick="show_register()">
+			I dont have a login
+		</button>
+
+		<button class="btn btn-default nav-pills" onclick="show_about()">
+			About PokeDex
 		</button>
 
 		<form id="login-form"  action="login.php" class="non-visible form-group" method="post">
@@ -45,9 +61,7 @@
 
 		</form>
  
-		<button class="btn btn-default" onclick="show_register()">
-			I dont have a login
-		</button>
+		
 
 		<form id="register-form" action="reg.php" class="non-visible form-group" method="post">
 
@@ -104,7 +118,10 @@
 
 		</form>
 
-		<a href="about.php">What is PokeDex?</a>
+		<section id="about" class="non-visible">
+			<h2>PokeDex!</h2>
+			<p>PokeDex is a schoolproject we made in our php-lessons. PokeDex is purely our work-title. We are not affiliated with Nintendo or other who could claim copyright on the name.</p>
+		</section>
 
 	</div>
 		<script src="js/bootstrap.min.js"></script>

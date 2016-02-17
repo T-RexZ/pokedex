@@ -30,9 +30,8 @@ body{
 }
 
 button{
-	min-width: 200px;
-	display: block;
-	margin: 12px;
+	
+	
 	font-size: 1,5rem;
 }
 
@@ -54,11 +53,8 @@ a{
 }
 
 header{
-  height: 0px;
-  width: 0px;
-  margin: 0px;
+	margin-top: 56px;
 }
-
 
 footer{
   height:0px;
