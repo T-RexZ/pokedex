@@ -5,7 +5,7 @@
 
 body{
 	text-align: center;
-	
+	background: #2D78BB;
 }
 
 .non-visible{
@@ -59,11 +59,6 @@ header{
   margin: 0px;
 }
 
-
-
-body{
-	background: #2D78BB;
-}
 
 footer{
   height:0px;

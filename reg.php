@@ -3,7 +3,7 @@
 	session_start();
 
 	if (isset($_POST["reg_submit"])) {
-		include_once("../connection.php");
+		include_once("connection.php");
 
 		if (!empty($_POST["reg_email"])) {
 			$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_email"])));
