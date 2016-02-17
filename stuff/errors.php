@@ -2,17 +2,17 @@
 
 
 		if (empty($_POST['username'])) {
-			$$_SESSION['errors[]'] = 'The username cannot be empty';
+			$errors[] = 'The username cannot be empty';
 
 			}
 			if (empty($_POST['password']) || empty($_POST['repeat_password'])) {
-				$_SESSION['errors[]'] = 'The password cannot be empty';
+				$errors[] = 'The password cannot be empty';
 			}
 			if ($_POST['password'] !== $_POST['repeat_password']) {
-				$_SESSION['errors[]'] = 'the passwords must match';
+				$errors[] = 'the passwords must match';
 			}
 	
-			if (empty($_SESSION['errors[]'])) {
+			if (empty($errors)) {
 		
 				$username = mysqli_real_escape_string($link, $_POST['username']);
 				$password = mysqli_real_escape_string($link, $_POST['password']);
@@ -22,18 +22,20 @@
 
 				mysqli_query($link, $query);
 			
+			}else{
+				$_SESSION['errors'] = $errors;
 			}
 
 ?>
 
 
 <?php
-	if(isset($_SESSION['errors[]']))
-		if (empty($_SESSION['errors[]']) === false){
+	if(isset($_SESSION['errors']))
+		if (empty($_SESSION['errors']) === false){
 			?>
 			<ul style="text-align: center; list-style-type: none;">
 			<?php
-				foreach ($_SESSION['errors[]'] as $error) {
+				foreach ($_SESSION['errors'] as $error) {
 					echo "<li>{$error}</li>";
 				}
 			?>
