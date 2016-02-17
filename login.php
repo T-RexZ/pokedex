@@ -17,7 +17,7 @@
 		}
 
 		if ($email == $db_email && password_verify($password, $db_password) && !empty($email) && !empty($password)) {
-			$_SESSION["id"] = $user_id;
+			$_SESSION["user_id"] = $user_id;
 			mysqli_close($dbc);
 			die(header("location: user.php"));
 		}else{

@@ -5,7 +5,7 @@
 		die(header("location: index.php"));
 	}
 
-	include_once "connection.php";
+	include_once "../connection.php";
 
 	//Der skal joines med status senere
 	$sql = "SELECT * FROM users WHERE user_id = " . $_SESSION["user_id"];
@@ -43,8 +43,8 @@
 		            <section class="menu menu--off">
 		                
 		                
-		                <h2>Hamburger menu!</h2>
-		                    <p>&copy; Copyright - Victor Steen Kristiansen - 2015</p>
+		               
+		                    
 		            </section>
 	            </section>
             </nav>    

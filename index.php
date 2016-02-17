@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 	<header>
-		<div class="jumbotron">
+		<div class="jumbotron frontheader">
   			<div >
     			<h1>Welcome to PokeDex!</h1>
     			<p>PokeDex is a simple tool for colleagues to register when they arrive at work, or if they are sick, late or otherwise hindered.</p>

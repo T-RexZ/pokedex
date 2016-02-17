@@ -8,7 +8,7 @@
 		if (!empty($_POST["reg_email"])) {
 			$email = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_email"])));
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				$errors["email"] = "The email needs to be formattet as a email";
+				$errors["email"] = "The email needs to be formatted as an email address";
 			}
 		}else{
 			$errors["email"] = "The email cannot be empty";
@@ -77,6 +77,7 @@
 			die(header("location: index.php"));
 		}
 	}else {
-		die(header("location: index.php?in=0"));
+		#die(header("location: index.php?in=0"));
+		die(header("location: user.php"));
 	}
 ?>
