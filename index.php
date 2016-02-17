@@ -1,7 +1,6 @@
 <?php
 	error_reporting(E_ALL & ~E_NOTICE);
 	session_start();
-
 	if(isset($_SESSION["errors"])){
 		if (!empty($_SESSION["errors"])) {
 			$errors = $_SESSION["errors"];
