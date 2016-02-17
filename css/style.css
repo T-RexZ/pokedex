@@ -73,6 +73,7 @@ label{
 	
 ::-webkit-scrollbar{
 	display: none;
+
 }
 
 .buttons{
@@ -84,4 +85,5 @@ label{
 	margin-top: 24px;
 	display: block;
 	clear: both;
+
 }
