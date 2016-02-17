@@ -1,3 +1,15 @@
+<?php
+	error_reporting(E_ALL & ~E_NOTICE);
+	session_start();
+
+	if(isset($_SESSION["errors"])){
+		if (!empty($_SESSION["errors"])) {
+			$errors = $_SESSION["errors"];
+		}
+	}
+	session_destroy();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,11 +52,23 @@
 		<form id="register-form" action="reg.php" class="non-visible row form-group" method="post">
 			
 		    <label for="reg_email">Email address</label>
-
+		    <?php
+			    if (isset($errors)) {
+			    	if (!empty($errors)) {
+			    		echo "<p>" . $errors["email"] . "</p>";
+			    	}
+			    }  
+		    ?>
 			<input class="form-control" type="text" placeholder="email" name="reg_email"></input><br>
 
 			<label for="reg_pw">Password</label>
-
+			<?php
+			    if (isset($errors)) {
+			    	if (!empty($errors)) {
+			    		echo "<p>" . $errors["password"] . "</p>";
+			    	}
+			    }  
+		    ?>
 			<input class="form-control" type="password" placeholder="password" name="reg_pw"></input><br>
 
 			<label for="reg_rep_pw">Repeat password</label>
@@ -52,11 +76,23 @@
 			<input class="form-control" type="password" placeholder="repeat password" name="reg_rep_pw"></input><br>
 
 			<label for="reg_phone">Phone</label>
-
+			<?php
+			    if (isset($errors)) {
+			    	if (!empty($errors)) {
+			    		echo "<p>" . $errors["phone"] . "</p>";
+			    	}
+			    }  
+		    ?>
 			<input class="form-control" type="text" placeholder="phone number" name="reg_phone"></input><br>
 
 			<label for="reg_name">Name</label>
-
+			<?php
+			    if (isset($errors)) {
+			    	if (!empty($errors)) {
+			    		echo "<p>" . $errors["name"] . "</p>";
+			    	}
+			    }  
+		    ?>
 			<input class="form-control" type="text" placeholder="name" name="reg_name"></input><br>
 
 			<input class="btn btn-default" type="submit" name="reg_submit"></input><br>

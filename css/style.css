@@ -2,10 +2,12 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	text-align: center;
 	margin: 12px;
 }
+
 .non-visible{
 	display: none;
 	transition: 300ms;
@@ -19,19 +21,23 @@ body{
 .max-40-vw{
 	width: 40vw;
 }
+
 .max-40-of-parent{
 	width: 40%; 
 }
+
 button{
 	min-width: 200px;
 	display: block;
 	margin: 12px;
 	font-size: 1,5rem;
 }
+
 form{
 	margin: 12px;
 	display: block;
 }
+
 input{
 	margin: 6px;
 }
@@ -46,8 +52,6 @@ header{
   width: 0px;
   margin: 0px;
 }
-
-
 
 body{
 	background: #2D78BB;
