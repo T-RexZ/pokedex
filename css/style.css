@@ -101,9 +101,15 @@ label{
 	background-color: #2D78BB;
 }
 
+#profile_image_wrapper 
+{
+
+	width: 250px;
+	margin: 0 auto;
+	position: relative;
+}
 
 #profile_image_wrapper img
-
 {
 	height: 250px;
 	width: 250px;
@@ -118,4 +124,21 @@ label{
 {
 	height: 150px;
 	width: 150px;
+}
+
+#profile_image_wrapper span
+{
+	color: white;
+	font-size: 23pt;
+	position: absolute;
+	top: 180px;
+	right: 20px;
+	padding-top: 15px;
+	height: 60px;
+	width: 60px;
+}
+
+.contact_button
+{
+	min-width: 75%;
 }

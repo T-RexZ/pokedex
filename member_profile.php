@@ -63,7 +63,7 @@
         			echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
         		?>
         			<!--	Echo src fra PHP	-->
-        		<div class="img-circle" id="status">
+        		<div class="img-circle status_color">
         			<span class="glyphicon glyphicon-ok"></span>
         		</div> 			<!--	Status color	-->
         	</div>
