@@ -1,13 +1,12 @@
 <?php
 	session_start();
-	if(!isset($_SESSION["user_id"]))
+	/*if(!isset($_SESSION["user_id"]))
 	{
 		die(header("location: index.php"));
-	}
+	}*/
 
 	include_once "../connection.php";
 
-	//Der skal joines med status senere
 	$sql = "SELECT * FROM users
 			INNER JOIN status 
 			ON user_id = fk_user_id 
@@ -37,9 +36,9 @@
     	<meta name="mobile-web-app-capable" content="yes">
     	<meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
     </head>
     <body>
@@ -65,9 +64,7 @@
         <section class="container-fluid" id="profile">	
         	<div id="profile_image_wrapper">
         		<?php
-        			echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
-        	
-        
+        			
         			$color = "";
 
         			switch ($status_id) 
@@ -89,7 +86,9 @@
 	    					break;
         			}
 
-					 
+					 echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
+            
+        
         			echo '<span class="img-circle glyphicon ' . $status_description . '" style="background-color:' . $color . '"></span>';
         			
         		
