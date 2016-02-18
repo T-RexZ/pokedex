@@ -16,6 +16,7 @@
 		$name = $row["user_name"];
 		$email = $row["user_email"];
 		$phone = $row["user_phone"];
+		$img = $row["user_img"];
 	}
 
 ?>
@@ -56,7 +57,10 @@
         </header>
         <section class="container-fluid" id="profile">	
         	<div id="profile_image_wrapper">
-        		<img class="img-circle" src="profile_test.jpg" alt="profile image">	<!--	Echo src fra PHP	-->
+        		<?php
+        			echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
+        		?>
+        			<!--	Echo src fra PHP	-->
         		<div class="img-circle" id="status">
         			<span class="glyphicon glyphicon-ok"></span>
         		</div> 			<!--	Status color	-->

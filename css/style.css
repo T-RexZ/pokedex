@@ -90,3 +90,11 @@ label{
 .frontheader{
 	margin: 12px;
 }
+
+
+#profile_image_wrapper img
+
+{
+	height: 250px;
+	width: 250px;
+}
