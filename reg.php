@@ -55,7 +55,7 @@
 			$phone = mysqli_real_escape_string($dbc, trim(strip_tags($_POST["reg_phone"])));
 			//tjekker om phone er fomateret rigtigt
 			if(!preg_match("/^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$/", $phone)){
-				$errors["phone"] = "The phone number is not valit";
+				$errors["phone"] = "The phone number is not valid";
 			}
 		}else {
 			$phone = "NULL";
@@ -69,7 +69,7 @@
 			if ($billed["error"] == UPLOAD_ERR_OK && !empty($billed)) {
 				//uploader filen
 				if (!move_uploaded_file($billed["tmp_name"], "img/profile_pic/" . $img)) {
-					$errors["file"] = "The file cant be uploadet";
+					$errors["file"] = "The file cant be uploaded";
 				}
 			}
 		}else {

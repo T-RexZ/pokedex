@@ -23,6 +23,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="theme-color" content="#2D78BB">
+    	<meta name="mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -42,7 +47,7 @@
 	                </section>
 		            <section class="menu menu--off">
 		                
-		                
+		                <button class="btn btn-default buttons" onclick="logout.php"></button>
 		               
 		                    
 		            </section>

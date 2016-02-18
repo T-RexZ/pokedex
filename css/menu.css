@@ -44,9 +44,9 @@
 
 .menu--off {
   position: fixed;
-  left: -33%;
+  left: -75%;
   top: 0px;
-  width: 33%;
+  width: 75%;
   display: block;
   background-color: #143654;
   min-height: 600px;
