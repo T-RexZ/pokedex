@@ -5,7 +5,12 @@
 
 body{
 	text-align: center;
-	background: #2D78BB;
+	background-color: #2D78BB;
+}
+
+html
+{
+    background-color: #2D78BB;
 }
 
 .non-visible{
@@ -91,10 +96,26 @@ label{
 	margin: 12px;
 }
 
+#profile
+{
+	background-color: #2D78BB;
+}
+
 
 #profile_image_wrapper img
 
 {
 	height: 250px;
 	width: 250px;
+}
+
+#member_list
+{	
+    background-color: #2D78BB;
+}
+
+.members_profile_image
+{
+	height: 150px;
+	width: 150px;
 }

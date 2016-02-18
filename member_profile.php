@@ -7,8 +7,10 @@
 
 	include_once "../connection.php";
 
+	$member_id = $_GET["id"];
+
 	//Der skal joines med status senere
-	$sql = "SELECT * FROM users WHERE user_id = " . $_SESSION["user_id"];
+	$sql = "SELECT * FROM users WHERE user_id = " . $member_id;
 
 	if ($query = mysqli_query($dbc, $sql)) 
 	{
@@ -61,7 +63,7 @@
         			echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
         		?>
         			<!--	Echo src fra PHP	-->
-        		<div class="img-circle status_color" id="status"> <!--Sæt farven korresponderende til statusbeskeden-->
+        		<div class="img-circle" id="status">
         			<span class="glyphicon glyphicon-ok"></span>
         		</div> 			<!--	Status color	-->
         	</div>
