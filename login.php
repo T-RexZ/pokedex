@@ -18,10 +18,14 @@
 		//sammenliner om den indtastede email og emailen fra db er ens, sammenliner det hashet passerword med det password der er blevet indtastet, tjekker og der er blevet indtastet noget
 		if ($email == $db_email && password_verify($password, $db_password) && !empty($email) && !empty($password)) {
 			$_SESSION["user_id"] = $user_id;
+
 			//lukker db connection
+
 			mysqli_close($dbc);
 			die(header("location: user.php"));
-		}else{
+		}
+		else
+		{
 			mysqli_close($dbc);
 			die(header("location: index.php?log=0"));
 		}
