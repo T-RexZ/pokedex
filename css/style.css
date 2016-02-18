@@ -10,13 +10,16 @@ body{
 
 .non-visible{
 	height: 0;
+	width: 0;
 	visibility: hidden;
   	opacity: 0;
   	transition: visibility 0s, opacity 0.3s linear;
+  	margin: 0px;
 }
 
 .visible{
 	height: auto;
+	width: auto;
 	visibility: visible;
   	opacity: 1;
 }
@@ -53,7 +56,7 @@ a{
 }
 
 header{
-	margin-top: 12px;
+	
 }
 
 footer{
@@ -65,8 +68,25 @@ footer{
 label{
 	color: #fff;
 	margin: 12px;
+
 }
 	
 ::-webkit-scrollbar{
 	display: none;
+
+}
+
+.buttons{
+	margin: 5px;
+}
+
+#about{
+	background-color: #fff; 
+	margin-top: 24px;
+	display: block;
+	clear: both;
+
+}
+.frontheader{
+	margin: 12px;
 }

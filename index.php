@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 	<header>
-		<div class="jumbotron">
+		<div class="jumbotron frontheader">
   			<div >
     			<h1>Welcome to PokeDex!</h1>
     			<p>PokeDex is a simple tool for colleagues to register when they arrive at work, or if they are sick, late or otherwise hindered.</p>
@@ -33,22 +33,25 @@
 	</header>
 	<body class="container">
 	<div class="row">
-
-		<button class="btn btn-default nav-pills" onclick="show_login()">
+		<div class="col-md-4 container">
+		<button class="btn btn-default buttons" onclick="show_login()">
 			I already have a login
 		</button>
-
-		<button class="btn btn-default nav-pills" onclick="show_register()">
+		</div>
+		<div class="col-md-4 container">
+		<button class="btn btn-default buttons" onclick="show_register()">
 			I dont have a login
 		</button>
-
-		<button class="btn btn-default nav-pills" onclick="show_about()">
+		</div>
+		<div class="col-md-4 container">
+		<button class="btn btn-default buttons" onclick="show_about()">
 			About PokeDex
 		</button>
+		</div>
 
 		<form id="login-form"  action="login.php" class="non-visible form-group" method="post">
 
-			<label for="login_email">Email Address</label>
+			<label for="login_email">Email address</label>
 
 			<input class="form-control" type="email" placeholder="email" name="login_email"></input><br>
 
@@ -123,10 +126,11 @@
 
 		</form>
 
-		<section id="about" class="non-visible">
-			<h2>PokeDex!</h2>
-			<p>PokeDex is a schoolproject we made in our php-lessons. PokeDex is purely our work-title. We are not affiliated with Nintendo or other who could claim copyright on the name.</p>
-		</section>
+		<div id="about" class="non-visible panel panel-default">
+			<div class="panel-body">
+				<h2>PokeDex!</h2>
+				<p>PokeDex is a schoolproject we made in our php-lessons. PokeDex is purely our work-title. We are not affiliated with Nintendo or other who could claim copyright on the name.</p>
+		</div>
 
 	</div>
 		<script src="js/bootstrap.min.js"></script>
