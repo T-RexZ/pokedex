@@ -7,8 +7,12 @@
 
 	include_once "../connection.php";
 
-	//Der skal joines med status senere
-	$sql = "SELECT * FROM users WHERE user_id = " . $_SESSION["user_id"];
+	$sql = "SELECT * FROM users
+			INNER JOIN status 
+			ON user_id = fk_user_id 
+			INNER JOIN descriptions 
+			ON fk_description_id = description_id
+			WHERE user_id = " . $_SESSION["user_id"];
 
 	if ($query = mysqli_query($dbc, $sql)) 
 	{
@@ -17,6 +21,8 @@
 		$email = $row["user_email"];
 		$phone = $row["user_phone"];
 		$img = $row["user_img"];
+		$status_id = $row["status_id"];
+		$status_description = $row["description_text"];
 	}
 
 ?>
@@ -30,9 +36,9 @@
     	<meta name="mobile-web-app-capable" content="yes">
     	<meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
     </head>
     <body>
@@ -67,8 +73,39 @@
 =======
         	<div id="profile_image_wrapper">
         		<?php
-        			echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
+        			
+        			$color = "";
+
+        			switch ($status_id) 
+        			{
+        				case 1:
+        					$color = "#5cb85c";
+        					break;
+        				
+        				case 2:
+        					$color = "#d9534f";
+        					break;
+
+        				case 3:
+        					$color = "#5bc0de";
+        					break;
+
+    					case 4:
+	    					$color = "#f0ad4e";
+	    					break;
+        			}
+
+					 echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
+            
+        
+        			echo '<span class="img-circle glyphicon ' . $status_description . '" style="background-color:' . $color . '"></span>';
+        			
+        		
+        		
+        	
+
         		?>
+<<<<<<< HEAD
         			<!--	Echo src fra PHP	-->
         		<div class="img-circle status_color" id="status"> <!--Sæt farven korresponderende til statusbeskeden-->
 >>>>>>> origin/Frederik_H
@@ -78,6 +115,14 @@
         	<h1><?= $name ?></h1> 				<!-- 	 name	-->
         	<?php echo '<a class="btn btn-success" href="mailto:' . $email . '">' . $email . '</a>  <!--	Mail	--> <br>';
         		  echo '<a class="btn btn-info" href="#">' . $phone . '</a>			<!--	Phone	-->';
+=======
+    		</div> 			
+    		<!--	Status color	-->
+        	<h1><?= $name ?></h1> 				
+        	<!-- 	 name	-->
+        	<?php echo '<a class="btn btn-success glyphicon glyphicon-envelope contact_button" href="mailto:' . $email . '"> ' . $email . '</a>  <!--	Mail	--> <br>';
+        		  echo '<a class="btn btn-info glyphicon glyphicon-earphone contact_button" href="#"> ' . $phone . '</a>			<!--	Phone	-->';
+>>>>>>> origin/Frederik_H
 
         	?>
         </section>

@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	if(!isset($_SESSION["user_id"]))
+	/*if(!isset($_SESSION["user_id"]))
 	{
 		die(header("location: index.php"));
-	}
+	}*/
 
 	include_once "../connection.php";
 
@@ -12,7 +12,9 @@
 		private $id;
 		private $name;
 		private $image;
-		private $status;
+		private $status_id;
+		private $status_description;
+		private $message;
 
 		//Set id
 		public function setId($id)
@@ -33,9 +35,21 @@
 		}
 
 		//Set status 
-		public function setStatus($status)
+		public function setStatusId($status)
 		{
-			$this->status = $status;
+			$this->status_id = $status;
+		}
+
+		//Set status 
+		public function setStatusDescription($desc)
+		{
+			$this->status_description = $desc;
+		}
+
+		//Set message
+		public function setMessage($message)
+		{
+			$this->message = $message;
 		}
 
 
@@ -56,19 +70,44 @@
 		{
 			return $this->image;
 		}
+
+		//Get profile status id
+		public function getStatusId()
+		{
+			return $this->status_id;
+		}
+
+		//Get status description
+		public function getStatusDescription()
+		{
+			return $this->status_description;
+		}
+
+		//Get message
+		public function getMessage()
+		{
+			return $this->message;
+		}
 	}
 
 
 	//Join status
-	$sql = "SELECT * FROM users"; 
+		$sql = "SELECT * FROM users
+			INNER JOIN status 
+			ON user_id = fk_user_id 
+			INNER JOIN descriptions 
+			ON fk_description_id = description_id
+			INNER JOIN messages
+			ON message_id = fk_message_id";
+
 			
-			//INNER JOIN status
-			//ON user_id = fk_user_id";
+		
 
  	$member_list = array();
 
 	if ($query = mysqli_query($dbc, $sql)) 
 	{
+
 		while($row = mysqli_fetch_assoc($query))
 		{
 			$member = new Member;
@@ -76,7 +115,9 @@
 			$member->setId($row["user_id"]);
 			$member->setName($row["user_name"]);
 			$member->setImage($row["user_img"]);
-			//$member->setName($row["fk_message_id"]);  //Skal ændres senere, så den henter selve beskrivelsen. Nu er det bare test
+			$member->setStatusId($row["status_id"]);
+			$member->setStatusDescription($row["description_text"]);
+			$member->setMessage($row["message_text"]);
 
 			array_push($member_list, $member);
 		}
@@ -94,9 +135,9 @@
     	<meta name="mobile-web-app-capable" content="yes">
     	<meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">		
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
     </head>
     <body>
@@ -122,18 +163,45 @@
         <section id="member_list">
         	<?php
 
-        	//Der skal styles med status og besked
         	foreach ($member_list as $member) 
         	{
-        		echo '<div class="individual_member">';
-        		echo '<img class="img-circle members_profile_image" src="img/profile_pic/' . $member->getImage() . '" alt="profile image">';       		
+
+
+				$color = "";
+
+        			switch ($member->getStatusId()) 
+        			{
+        				case 1:
+        					$color = "#5cb85c";
+        					break;
+        				
+        				case 2:
+        					$color = "#d9534f";
+        					break;
+
+        				case 3:
+        					$color = "#5bc0de";
+        					break;
+
+    					case 4:
+	    					$color = "#f0ad4e";
+	    					break;
+        			}
+
+				echo '<div class="individual_member">';
+				echo '<div class="member_wrapper">';
+			    echo '<img onclick="show_message(this)" class="img-circle members_profile_image" src="img/profile_pic/' . $member->getImage() . '" alt="profile image">';       
+        	    echo '<span class="img-circle glyphicon ' . $member->getStatusDescription() . '" style="background-color:' . $color . '"></span>';
         		echo '<h2>' . $member->getName() . '</h2>';
-        		echo '<a class="btn btn-default"href="member_profile.php?id=' . $member->getId() . '">Se profil</a>'; 
+        		echo '<a class="btn btn-default"href="member_profile.php?id=' . $member->getId() . '">Se profil</a><br>'; 
+        		echo '<textarea class="message_hidden" readonly>' . $member->getMessage() . '</textarea>';
+        		echo "</div>";
         		echo "</div>";
         	}
 
         	?>
         </section>
 	<script src="js/menu.js"></script>
+	<script src="js/buttons.js"></script>
     </body>
 </html>

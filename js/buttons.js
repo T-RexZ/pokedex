@@ -25,3 +25,12 @@ function show_about() {
 	document.getElementById('login-form').classList.remove('visible');
 	document.getElementById('register-form').classList.remove('visible');
 }
+
+
+function show_message(node) {
+
+	node.parentNode.getElementsByTagName("textarea")[0].classList.toggle("message_visible");
+	
+	
+
+}
