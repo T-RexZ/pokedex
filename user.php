@@ -21,7 +21,7 @@
 		$email = $row["user_email"];
 		$phone = $row["user_phone"];
 		$img = $row["user_img"];
-		$status_id = $row["status_id"];
+		$status_id = $row["fk_description_id"];
 		$status_description = $row["description_text"];
 	}
 
@@ -62,15 +62,7 @@
             </nav>    
         </header>
         <section class="container-fluid" id="profile">	
-<<<<<<< HEAD
-        	<div class="profile_image_wrapper">
 
-        	
-        		<?php
-        			echo '<img class="profile_image" src="img/profile_pic/'. $img .'" alt="profile image">';
-        		?>	<!--	Echo src fra PHP	-->
-        		<div class="img-circle" id="status">
-=======
         	<div id="profile_image_wrapper">
         		<?php
         			
@@ -103,26 +95,14 @@
         		
         		
         	
-
-        		?>
-<<<<<<< HEAD
-        			<!--	Echo src fra PHP	-->
-        		<div class="img-circle status_color" id="status"> <!--Sæt farven korresponderende til statusbeskeden-->
->>>>>>> origin/Frederik_H
-        			<span class="glyphicon glyphicon-ok"></span>
-        		</div> 			<!--	Status color	-->
-        	</div>
-        	<h1><?= $name ?></h1> 				<!-- 	 name	-->
-        	<?php echo '<a class="btn btn-success" href="mailto:' . $email . '">' . $email . '</a>  <!--	Mail	--> <br>';
-        		  echo '<a class="btn btn-info" href="#">' . $phone . '</a>			<!--	Phone	-->';
-=======
-    		</div> 			
+                ?>
+			
     		<!--	Status color	-->
         	<h1><?= $name ?></h1> 				
         	<!-- 	 name	-->
         	<?php echo '<a class="btn btn-success glyphicon glyphicon-envelope contact_button" href="mailto:' . $email . '"> ' . $email . '</a>  <!--	Mail	--> <br>';
         		  echo '<a class="btn btn-info glyphicon glyphicon-earphone contact_button" href="#"> ' . $phone . '</a>			<!--	Phone	-->';
->>>>>>> origin/Frederik_H
+
 
         	?>
         </section>

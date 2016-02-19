@@ -24,7 +24,7 @@
 		$email = $row["user_email"];
 		$phone = $row["user_phone"];
 		$img = $row["user_img"];
-		$status_id = $row["status_id"];
+		$status_id = $row["fk_description_id"];
 		$status_description = $row["description_text"];
 	}
 
