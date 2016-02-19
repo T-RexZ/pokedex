@@ -95,7 +95,7 @@
 	    					break;
         			}
 
-					 echo '<img class="img-circle" src="img/profile_pic/' . $img . '" alt="profile image">';
+					 echo '<img class="img-circle" src="../img/profile_pic/' . $img . '" alt="profile image">';
             
         
         			echo '<span class="img-circle glyphicon ' . $status_description . '" style="background-color:' . $color . '"></span>';
