@@ -115,7 +115,7 @@
 			$member->setId($row["user_id"]);
 			$member->setName($row["user_name"]);
 			$member->setImage($row["user_img"]);
-			$member->setStatusId($row["status_id"]);
+			$member->setStatusId($row["fk_description_id"]);
 			$member->setStatusDescription($row["description_text"]);
 			$member->setMessage($row["message_text"]);
 
@@ -190,7 +190,7 @@
 
 				echo '<div class="individual_member">';
 				echo '<div class="member_wrapper">';
-			    echo '<img onclick="show_message(this)" class="img-circle members_profile_image" src="img/profile_pic/' . $member->getImage() . '" alt="profile image">';       
+			    echo '<img onclick="show_message(this)" class="img-circle members_profile_image" src="../img/profile_pic/' . $member->getImage() . '" alt="profile image">';       
         	    echo '<span class="img-circle glyphicon ' . $member->getStatusDescription() . '" style="background-color:' . $color . '"></span>';
         		echo '<h2>' . $member->getName() . '</h2>';
         		echo '<a class="btn btn-default"href="member_profile.php?id=' . $member->getId() . '">Se profil</a><br>'; 
